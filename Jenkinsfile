@@ -3,7 +3,7 @@ pipeline {
     	stages {     	 
     	stage("Compile") {          	 
             	steps {   
-			sh "export MAVEN_HOME=/usr/local/opt/maven@3.6/apache-maven-3.6.3"
+			sh "export MAVEN_HOME=/usr/local/Cellar/maven/3.6.3_1/libexec"
 			sh "export PATH=$PATH:$MAVEN_HOME/bin"
 			sh "mvn --version"
                 	sh "mvn compile"          	 
@@ -11,7 +11,7 @@ pipeline {
         	}     	 
     	stage("Unit test") {          	 
         	steps {   
-			sh "export MAVEN_HOME=/usr/local/opt/maven@3.6/apache-maven-3.6.3"
+			sh "export MAVEN_HOME=/usr/local/Cellar/maven/3.6.3_1/libexec"
 			sh "export PATH=$PATH:$MAVEN_HOME/bin"
 			sh "mvn --version"
                 	sh "mvn compile"   
