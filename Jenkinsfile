@@ -3,12 +3,12 @@ pipeline {
     	stages {     	 
     	stage("Compile") {          	 
             	steps {   
-                	sh "maven compile"          	 
+                	sh "mvn compile"          	 
             	}     	 
         	}     	 
     	stage("Unit test") {          	 
         	steps {      
-                	sh "maven test"          	 
+                	sh "mvn test"          	 
             	}     	 
         	}	 
     	}
